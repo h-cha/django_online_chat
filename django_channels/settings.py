@@ -31,14 +31,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
+    'chat',
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'chat',
-    'channels',
+    
 ]
 
 MIDDLEWARE = [
@@ -132,3 +134,13 @@ CHANNEL_LAYERS = {
                 },
         },
 }
+
+
+#カスタムユーザー
+AUTH_USER_MODEL = 'accounts.CustomUser'
+
+# ログイン/ログアウト
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'home'
+
+LOGOUT_REDIRECT_URL = 'index'
