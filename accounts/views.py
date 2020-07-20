@@ -44,7 +44,7 @@ class SignUp(CreateView):
     template_name = "accounts/signup.html" 
     
     def get_success_url(self):
-        return reverse('index')
+        return reverse('home')
 
     def form_valid(self, form):
         user = form.save() # formの情報を保存
