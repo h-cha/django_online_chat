@@ -11,6 +11,8 @@ media
 __pycache__
 *.pyc
 *.pyo
+*.ini
+=======
 
 
 #root起点に除外
@@ -19,3 +21,4 @@ __pycache__
 /db.sqlite3
 /images
 /.spyproject
+=======
