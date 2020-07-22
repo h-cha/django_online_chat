@@ -1,21 +1,39 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
- 
+<html lang="ja">
 <head>
-    <meta charset="utf-8" />
-    <title>トップ画面</title>
+  <meta charset="UTF-8">
+  <title>TOP</title>
+<link rel="stylesheet" href="{% static 'chat/css/reset.css' %}" />
+  <link rel="stylesheet" href="{% static 'chat/css/style.css' %}" />
 </head>
- 
 <body>
-    <h1>トップ画面</h1>
- 
-    {% if user.is_authenticated %}
-    <p><a href="{% url 'logout' %}">ログアウト</a></p>
-    {% else %}
-    <p><a href="{% url 'login' %}">ログイン</a></p>
-    {% endif %}
-    
-     <p><a href="{% url 'signup' %}">新規ユーザー登録</a></p>
+  <header class="header">
+    <h2 class="head">TOP</h2>
+
+    <nav class="global-nav">
+      <ul>
+       <li class="nav-item active"><a href="{% url 'home' %}">HOME</a></li>
+          {% if user.is_authenticated %}
+        <li class="nav-item"><a href="{% url 'logout' %}">LOGOUT</a></li>
+            {% else %}
+        <li class="nav-item"><a href="{% url 'login' %}">LOGIN</a></li>
+           {% endif %}
+        <li class="nav-item"><a href="{% url 'signup' %}">SIGN UP</a></li>
+        
+
+      </ul>
+    </nav>
+
+  </header>
+  <div class="wrapper clearfix">
+    <main class="main">
+
+      
+
+    </main>
+   
+  </div>
+  
 </body>
- 
 </html>
