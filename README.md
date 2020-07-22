@@ -20,15 +20,15 @@ $ python3 -m pip install channels_redis
 
 * DOCKER
 ```bash
-docker run -p 6379:6379 -d redis:5
+$ docker run -p 6379:6379 -d redis:5
 ```
 
 ```bash
-git clone https://github.com/h-cha/django_online_chat
-cd django_channels
-python manage.py makemigrations
-python manage.py migrate
-python manage.py runserver
+$ git clone https://github.com/h-cha/django_online_chat
+$ cd django_channels
+$ python manage.py makemigrations
+$ python manage.py migrate
+$ python manage.py runserver
 
 ```
  
