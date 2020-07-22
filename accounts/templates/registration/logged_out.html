@@ -13,3 +13,41 @@
 </body>
  
 </html>
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>LOGOUT</title>
+  
+ <link rel="stylesheet" href="{% static 'chat/css/reset.css' %}" />
+  <link rel="stylesheet" href="{% static 'chat/css/style.css' %}" />
+</head>
+<body>
+  <header class="header">
+    <h2 class="head">LOGOUT</h2>
+ 
+    <nav class="global-nav">
+      <ul>
+        <li class="nav-item active"><a href="{% url 'login' %}">LOGIN</a></li>
+
+      </ul>
+    </nav>
+
+  </header>
+  <div class="wrapper clearfix">
+    <main class="main">
+
+      <h2 class="heading">LOGOUT</h2>
+        <p style="margin:20px;">
+      <p>ログアウトしました</p>
+    </form>
+      
+
+    </main>
+    
+  </div>
+  
+</body>
+</html>

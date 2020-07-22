@@ -20,6 +20,26 @@
         document.querySelector('#room-name-submit').onclick = function(e){
             var roomName = document.querySelector('#room-name-input').value;
             window.location.pathname = '/chat/' + roomName + '/';
+            <!--
+            var json_asocc = {
+                'user' : '##',
+               
+            }
+            var json_text = JSON.stringify(json_asocc);
+            -->
+        <!--
+        xhr = new XMLHttpRequest;
+            xhr.onload = function(){
+                var res = xhr.responseText;
+                if( res.length>0) alert(res);
+            };
+            xhr.onerror = function(){
+                alert("error!");
+            }
+            xhr.open('post', "",true);
+            
+            xhr.send(json_text);
+            -->
         };
     </script>
     

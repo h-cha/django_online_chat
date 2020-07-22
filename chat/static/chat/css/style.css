@@ -30,7 +30,8 @@ a:link, a:visited, a:hover, a:active {
 }
 .heading {
   padding: 10px 12px;
-  background: url('../images/bg-slash.gif');
+  background-color: #efebe0;
+
   letter-spacing: 1px;
   font-size: 1.6rem;
 }
@@ -45,23 +46,36 @@ a:link, a:visited, a:hover, a:active {
 .header {
   width: 100%;
   padding: 28px 0 10px;
-  background: url('../images/bg-header.gif') repeat-x;
+background-color: #8ac8cf;
   box-shadow: 0 0 10px 1px #e3e3e3;
 }
 .logo {
+  text-align: center;
+  
   width: 225px;
   height: 56px;
   margin: 0 auto;
-  background: url('../images/logo.png') no-repeat;
+
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
 }
 .logo a {
-  display: block;
-  width: 100%;
-  height: 100%;
+  padding: 10px 12px;
+  background-color: #efebe0;
+
+  letter-spacing: 1px;
+  font-size: 1.6rem;
+
 }
+.head {
+  padding: 10px 12px;
+
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 2.0rem;
+}
+
 .global-nav {
   margin-top: 15px;
   text-align: center;
@@ -84,7 +98,7 @@ a:link, a:visited, a:hover, a:active {
 }
 .global-nav .nav-item.active a,
 .global-nav .nav-item a:hover {
-  background-color: #d03c56;
+background-color: #f7c3bf;
   color: #fff;
 }
 
@@ -334,15 +348,17 @@ a:link, a:visited, a:hover, a:active {
 }
 .documents {
   margin: 10px 10px 30px;
+
 }
 .documents,
 .documents ul {
   list-style-type: none;
+
 }
 .documents > li .title {
   margin: 15px 0;
   padding-left: 8px;
-  border-left: 5px solid #d03c56;
+  border-left: 5px solid #f7c3bf;
   font-size: 1.4rem;
   line-height: 1.2;
 }
@@ -355,10 +371,11 @@ a:link, a:visited, a:hover, a:active {
 .documents > li ul > li {
   margin-bottom: 15px;
   padding-left: 10px;
-  background: url('../images/arrow.gif') no-repeat left center;
+  
 }
 .documents a:hover {
   text-decoration: underline;
+
 }
 .search-box {
   padding: 15px;

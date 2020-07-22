@@ -1,20 +1,51 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
- 
+<html lang="ja">
 <head>
-    <meta charset="utf-8" />
-    <title>ログインフォーム画面</title>
+  <meta charset="UTF-8">
+  <title>LOGIN</title>
+  
+ <link rel="stylesheet" href="{% static 'chat/css/reset.css' %}" />
+  <link rel="stylesheet" href="{% static 'chat/css/style.css' %}" />
 </head>
- 
 <body>
-    <h1>ログインフォーム画面</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">ログイン</button>
-    </form>
-    
-    <p><a href="{% url 'signup' %}">新規ユーザー登録</a></p>
-</body>
+  <header class="header">
+    <h2 class="head">LOGIN</h2>
  
+    <nav class="global-nav">
+      <ul>
+        <li class="nav-item active"><a href="{% url 'signup' %}">SIGN UP</a></li>
+
+      </ul>
+    </nav>
+
+  </header>
+  <div class="wrapper clearfix">
+    <main class="main">
+
+      <h2 class="heading">LOGIN</h2>
+
+          <p style="margin:20px;">
+           {% block content %}
+      <form action="" method="POST">
+    {% csrf_token %}
+   <p> {{ form.username.label_tag }}
+        {{ form.username }}</p>
+          <p style="margin:20px;">
+       <p> {{ form.password.label_tag }}
+        {{ form.password }}</p>
+ 
+      
+          <p style="margin:20px;">
+    <button type="submit">LOGIN</button>
+    {% endblock %}
+
+    </form>
+      
+
+    </main>
+    
+  </div>
+  
+</body>
 </html>

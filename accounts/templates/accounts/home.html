@@ -1,23 +1,48 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html>
-
+<html lang="ja">
 <head>
-    <meta charset="utf-8" />
-    <title>ホーム画面</title>
-</head>
-
-<body>
-    <h1>ホーム画面</h1>
-
-    <p>こんにちは{{ user.username }}さん</p>
-
-    <p><a href="{% url 'logout' %}">ログアウト</a></p>
-    
+  <meta charset="UTF-8">
+  <title>HOME</title>
+  <link rel="stylesheet" href="{% static 'chat/css/reset.css' %}" />
+  <link rel="stylesheet" href="{% static 'chat/css/style.css' %}" />
   
+</head>
+<body>
+  <header class="header">
+    <h2 class="head">HOME</h2>
     
-   
-   <br> What chat room would you like to enter?<br/>
-    <input id="room-name-input" type="text" size="100"/><br/>
+    <nav class="global-nav">
+      <ul>
+        <li class="nav-item active"><a href="{% url 'logout' %}">LOGOUT</a></li>
+        <li class="nav-item"></li>
+        <li class="nav-item"></li>
+        <li class="nav-item"></li>
+        <li class="nav-item"></li>
+        <li class="nav-item"></li>
+      </ul>
+    </nav>
+
+  </header>
+  <div class="wrapper clearfix">
+    <main class="main">
+  
+      <h2 class="heading">HOME</h2>
+  <p style="margin:20px;">
+
+            <span class="title">こんにちは{{ user.username }}さん</span>
+          <p style="margin:20px;">
+
+<h2 class="heading">ENTER ROOM</h2>
+      <p style="margin:20px;">
+
+       <br>どのチャットルームに入りますか？<br/>
+         <p style="margin:20px;">
+
+    <input id="room-name-input" type="text" size="80"/><br/>
+      <p style="margin:20px;">
+
     <input id="room-name-submit" type="button" value="Enter">
     
     <script>
@@ -33,7 +58,29 @@
             window.location.pathname = '/chat/' + roomName + '/';
         };
     </script>
-    <p>ルーム名は英数字のみ</p>
-</body>
+      <p style="margin:20px;">
 
+    <br>ルーム名は英数字のみ</br>
+     
+    </main>
+    <div class="sidemenu">
+  
+    
+      <ul class="documents">
+        <li>
+          <h3 class="title">ROOMS</h3>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </li>
+       
+      </ul>
+     
+    </div>
+  </div>
+
+</body>
 </html>

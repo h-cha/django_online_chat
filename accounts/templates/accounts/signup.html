@@ -1,21 +1,50 @@
 {% load static %}
-<html>
-<body>
 
-{% block content %}
-  <h2>Sign up</h2>
-  <form action="" method="POST">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>SIGN UP</title>
+ <link rel="stylesheet" href="{% static 'chat/css/reset.css' %}" />
+  <link rel="stylesheet" href="{% static 'chat/css/style.css' %}" />
+  
+</head>
+<body>
+  <header class="header">
+    <h2 class="head">SIGN UP</h2>
+
+    <nav class="global-nav">
+      <ul>
+        <li class="nav-item active"><a href="{% url 'home' %}">HOME</a></li>
+    
+      </ul>
+    </nav>
+
+  </header>
+  <div class="wrapper clearfix">
+    <main class="main">
+
+      <h2 class="heading">SIGN UP</h2>
+        <p style="margin:20px;">
+      {% block content %}
+      <form action="" method="POST">
     {% csrf_token %}
    <p> {{ form.username.label_tag }}
         {{ form.username }}</p>
-        
+          <p style="margin:20px;">
        <p> {{ form.password1.label_tag }}
         {{ form.password1 }}</p>
-        
+          <p style="margin:20px;">
         <p> {{ form.password2.label_tag }}
         {{ form.password2 }}</p>
+          <p style="margin:20px;">
     <button type="submit">Sign up</button>
+    {% endblock %}
   </form>
-{% endblock %}
+      
+    </main>
+    
+  </div>
+  
 </body>
-</html> 
+</html>

@@ -1,12 +1,32 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-    <meta charset="utf-8"/>
-    <title>Chat Rooms</title>
+  <meta charset="UTF-8">
+  <title>VOTE</title>
+
 </head>
 <body>
-    What chat room would you like to enter?<br/>
+  <link rel="stylesheet" href="{% static 'chat/css/reset.css' %}" />
+  <link rel="stylesheet" href="{% static 'chat/css/style.css' %}" />
+  <header class="header">
+    <h2 class="head">VOTE</h2>
+  </header>
+  <div class="wrapper clearfix">
+    <main class="main">
+  
+      <h2 class="heading">VOTE</h2>
+       <p style="margin:20px;">
+         怪しい人に投票してください<br/>
+           <p style="margin:20px;">
    <input type="button" onclick="history.back()" value="戻る">
+          
     
+    </main>
+    
+   
+  </div>
+
 </body>
 </html>
