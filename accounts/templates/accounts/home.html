@@ -16,11 +16,7 @@
     <nav class="global-nav">
       <ul>
         <li class="nav-item active"><a href="{% url 'logout' %}">LOGOUT</a></li>
-        <li class="nav-item"></li>
-        <li class="nav-item"></li>
-        <li class="nav-item"></li>
-        <li class="nav-item"></li>
-        <li class="nav-item"></li>
+
       </ul>
     </nav>
 
@@ -70,7 +66,12 @@
         <li>
           <h3 class="title">ROOMS</h3>
           <ul>
-            <li></li>
+          {% for r in room %}
+          
+     <li>{{ r}}</li>
+
+    {% endfor %}
+           
             <li></li>
             <li></li>
             <li></li>
