@@ -21,8 +21,7 @@ $ python3 -m pip install channels_redis
 
 ```bash
 $ git clone https://github.com/h-cha/django_online_chat
-$ cd django_channels
-$ python manage.py makemigrations
+$ cd django_online_chat
 $ python manage.py migrate
 $ python manage.py runserver
 
@@ -32,5 +31,8 @@ $ python manage.py runserver
 ```bash
 $ docker run -p 6379:6379 -d redis:5
 ```
+
+* access
+http://localhost:8000/accounts
 
  
