@@ -27,7 +27,6 @@ def index(request):
 
 @login_required
 def home(request):
-    room_obj = Room.objects.get(id=34)
     room_obj = Room.objects.all()
     list_room = []
     latest_room = []
