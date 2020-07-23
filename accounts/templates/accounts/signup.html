@@ -38,8 +38,17 @@
         <p> {{ form.password2.label_tag }}
         {{ form.password2 }}</p>
           <p style="margin:20px;">
+          <p>パスワードはあまり他の個人情報と似てはいけません。</p>
+           <p style="margin:20px;">
+            <p>パスワードは8文字以上にする必要があります。</p>
+             <p style="margin:20px;">
+            <p>パスワードは、一般的に使用されるパスワードにすることはできません。</p>
+             <p style="margin:20px;">
+            <p>パスワードを完全に数字のみにすることはできません。</p>
+             <p style="margin:20px;">
     <button type="submit">Sign up</button>
     {% endblock %}
+
   </form>
       
     </main>

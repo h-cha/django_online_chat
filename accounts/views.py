@@ -17,6 +17,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic
 from .models import CustomUser
+from chat.models import Room
  
 
 
@@ -26,7 +27,21 @@ def index(request):
 
 @login_required
 def home(request):
-    return render(request, 'accounts/home.html')
+    room_obj = Room.objects.get(id=34)
+    room_obj = Room.objects.all()
+    list_room = []
+    latest_room = []
+    for i in reversed(room_obj):
+        if i.room_name not in list_room:
+            list_room.append(i.room_name)
+    for i in range(len(list_room)):
+        if i < 10:
+            latest_room.append(list_room[i])
+            
+
+    return render(request, 'accounts/home.html',  {
+            'room': latest_room
+    })
 
 
 
