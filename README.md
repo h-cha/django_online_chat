@@ -6,7 +6,7 @@
 * Django 2.0.5
 * channels 2.1.1
 * channels_redis
-* docker
+* docker 18.03.0-ce
  
 # Installation
 
